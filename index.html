@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="nude">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAIT | Students Association of Information Technology — CUSAT</title>
+  <meta name="description" content="Official website of SAIT — Division of Information Technology, School of Engineering, Cochin University of Science and Technology (CUSAT), Kochi, Kerala. Established 1995.">
+  <meta name="keywords" content="SAIT, CUSAT, Information Technology, Smart Campus Innovation, Hackathon, Engineering, Student Association">
+  <meta name="theme-color" content="#F2EEE7">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SAIT CUSAT — Students Association of Information Technology">
+  <meta property="og:description" content="Empowering students, encouraging innovation, and building the future of technology together. Division of IT, SOE, CUSAT.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="assets/images/sait-logo.png">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Atmospheric Interactive Canvas Layer (Hero + Background of All Sections)
+       ========================================================================= -->
+  <canvas id="techCanvas" aria-hidden="true"></canvas>
+
+  <!-- =========================================================================
+       Site Header & Floating Minimal Navigation
+       Left: Small SAIT Logo | Center: HOME, FEATURES, ACHIEVEMENTS, EVENTS, ABOUT, CONTACT | Right: Theme Switcher & Menu Button
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-wide header-inner">
+      <!-- Left: Small ORIGINAL SAIT logo (Champagne Gold, clearly visible) -->
+      <div class="header-left-group">
+        <a href="#home" class="nav-brand-logo" aria-label="SAIT Home">
+          <img src="assets/images/sait-logo.png" alt="SAIT Logo" class="nav-logo-img">
+        </a>
+      </div>
+
+      <!-- Center: Horizontally Centered Primary Navigation -->
+      <div class="nav-desktop-container">
+        <nav class="nav-desktop" aria-label="Primary Navigation">
+          <a href="#home" class="nav-link active" id="navLinkHome">HOME</a>
+          <a href="#features" class="nav-link" id="navLinkFeatures">FEATURES</a>
+          <a href="#achievements" class="nav-link" id="navLinkAchievements">ACHIEVEMENTS</a>
+          <a href="#events" class="nav-link" id="navLinkEvents">EVENTS</a>
+          <a href="#about" class="nav-link" id="navLinkAbout">ABOUT</a>
+          <a href="#contact" class="nav-link" id="navLinkContact">CONTACT</a>
+        </nav>
+      </div>
+
+      <!-- Right: Theme Switcher & Minimal Hamburger Menu Button -->
+      <div class="header-actions">
+        <button class="nav-matrix-btn" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+            <circle cx="3" cy="3" r="1.5"></circle>
+            <circle cx="9" cy="3" r="1.5"></circle>
+            <circle cx="15" cy="3" r="1.5"></circle>
+            <circle cx="3" cy="9" r="1.5"></circle>
+            <circle cx="9" cy="9" r="1.5"></circle>
+            <circle cx="15" cy="9" r="1.5"></circle>
+            <circle cx="3" cy="15" r="1.5"></circle>
+            <circle cx="9" cy="15" r="1.5"></circle>
+            <circle cx="15" cy="15" r="1.5"></circle>
+          </svg>
+        </button>
+        <button class="nav-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+          <span class="nav-menu-label">MENU</span>
+          <div class="nav-hamburger-icon" aria-hidden="true">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Premium Side Navigation Drawer -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" aria-hidden="true">
+    <aside class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+      <div class="mobile-drawer-header">
+        <div class="mobile-drawer-brand">
+          <img src="assets/images/sait-logo.png" alt="SAIT Logo" class="drawer-logo-img">
+          <div class="drawer-brand-info">
+            <span class="drawer-brand-title">SAIT CUSAT</span>
+            <span class="drawer-brand-sub">Division of IT</span>
+          </div>
+        </div>
+        <button class="modal-close drawer-close-btn" id="mobileDrawerClose" aria-label="Close menu">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="#home" class="mobile-nav-link"><span class="drawer-nav-num">01</span> HOME</a>
+        <a href="#features" class="mobile-nav-link"><span class="drawer-nav-num">02</span> FEATURES</a>
+        <a href="#achievements" class="mobile-nav-link"><span class="drawer-nav-num">03</span> ACHIEVEMENTS</a>
+        <a href="#events" class="mobile-nav-link"><span class="drawer-nav-num">04</span> EVENTS</a>
+        <a href="#about" class="mobile-nav-link"><span class="drawer-nav-num">05</span> ABOUT</a>
+        <a href="#contact" class="mobile-nav-link"><span class="drawer-nav-num">06</span> CONTACT</a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <div class="drawer-footer-text">
+          <div>DIVISION OF INFORMATION TECHNOLOGY</div>
+          <div>SCHOOL OF ENGINEERING • CUSAT</div>
+          <div class="drawer-footer-est">ESTABLISHED 1995 • NAAC 'A+' • NBA TIER-1</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         HERO SECTION — Clean Centered Hierarchy & Real IT Animation
+         [SAIT LOGO] -> SAIT -> STUDENT ASSOCIATION OF INFORMATION TECHNOLOGY -> Mission Sentence -> Accreditation -> Button
+         ======================================================================= -->
+    <section class="hero-section" id="home">
+      <!-- Ambient Graphic 1: Bottom-Left 3D Polyhedron Crystal with Glowing Vertices -->
+      <div class="hero-polyhedron-wrap" aria-hidden="true">
+        <svg class="hero-polyhedron-svg" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="polyGlow" cx="40%" cy="50%" r="60%">
+              <stop offset="0%" stop-color="#3A485C" stop-opacity="0.9"/>
+              <stop offset="60%" stop-color="#1E2736" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#0F1622" stop-opacity="0.98"/>
+            </radialGradient>
+            <radialGradient id="facetHighlight" cx="30%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#54657E" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#232E40" stop-opacity="0.95"/>
+            </radialGradient>
+          </defs>
+          <!-- Facets -->
+          <polygon points="120,60 290,110 240,260" fill="url(#facetHighlight)" stroke="#6C82A3" stroke-width="1.2" opacity="0.95"/>
+          <polygon points="120,60 240,260 70,220" fill="url(#polyGlow)" stroke="#4A5C75" stroke-width="1.2" opacity="0.95"/>
+          <polygon points="120,60 70,220 40,110" fill="#182230" stroke="#4A5C75" stroke-width="1.2" opacity="0.9"/>
+          <polygon points="70,220 240,260 180,380" fill="#131B26" stroke="#4A5C75" stroke-width="1.2" opacity="0.95"/>
+          <polygon points="70,220 180,380 30,320" fill="#0C121B" stroke="#3D4D63" stroke-width="1.2" opacity="0.95"/>
+          <polygon points="240,260 290,110 370,220" fill="#2B374A" stroke="#5D718C" stroke-width="1.2" opacity="0.95"/>
+          <polygon points="240,260 370,220 180,380" fill="#161F2C" stroke="#4A5C75" stroke-width="1.2" opacity="0.95"/>
+          <polygon points="290,110 120,60 220,20" fill="#3D4B60" stroke="#6C82A3" stroke-width="1.2" opacity="0.9"/>
+          
+          <!-- Outer constellation lines & vertices -->
+          <line x1="120" y1="60" x2="30" y2="40" stroke="rgba(212, 175, 55, 0.45)" stroke-width="0.8" stroke-dasharray="3 3"/>
+          <line x1="290" y1="110" x2="380" y2="70" stroke="rgba(212, 175, 55, 0.45)" stroke-width="0.8" stroke-dasharray="3 3"/>
+          <line x1="240" y1="260" x2="360" y2="340" stroke="rgba(212, 175, 55, 0.4)" stroke-width="0.8" stroke-dasharray="3 3"/>
+          <line x1="70" y1="220" x2="10" y2="250" stroke="rgba(212, 175, 55, 0.4)" stroke-width="0.8" stroke-dasharray="3 3"/>
+
+          <!-- Glowing Nodes -->
+          <circle cx="120" cy="60" r="3.5" fill="#FFFFFF"/>
+          <circle cx="290" cy="110" r="3.5" fill="#FFFFFF"/>
+          <circle cx="240" cy="260" r="4.0" fill="#FFFFFF"/>
+          <circle cx="70" cy="220" r="3.5" fill="#FFFFFF"/>
+          <circle cx="180" cy="380" r="3" fill="#D4AF37"/>
+          <circle cx="370" cy="220" r="2.5" fill="#D4AF37"/>
+          <circle cx="40" cy="110" r="2.5" fill="#D4AF37"/>
+          <circle cx="30" cy="40" r="2" fill="rgba(255,255,255,0.7)"/>
+          <circle cx="380" cy="70" r="2" fill="rgba(255,255,255,0.7)"/>
+          <circle cx="360" cy="340" r="2" fill="rgba(255,255,255,0.7)"/>
+        </svg>
+      </div>
+
+      <!-- Ambient Graphic 2: Bottom-Right PCB Circuits -->
+      <div class="hero-circuits-wrap" aria-hidden="true">
+        <svg class="hero-circuits-svg" viewBox="0 0 440 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M440,190 L340,190 L300,230 L180,230 L150,260" stroke="rgba(169, 133, 75, 0.45)" stroke-width="1.2"/>
+          <path d="M440,140 L360,140 L310,190 L220,190 L190,220 L120,220" stroke="rgba(169, 133, 75, 0.6)" stroke-width="1.2"/>
+          <path d="M440,90 L380,90 L330,140 L260,140 L230,170 L140,170 L110,200 L40,200" stroke="rgba(169, 133, 75, 0.5)" stroke-width="1.2"/>
+          <path d="M440,50 L400,50 L360,90 L290,90 L270,110 L190,110 L170,130" stroke="rgba(169, 133, 75, 0.4)" stroke-width="1.2"/>
+          
+          <!-- Solder Pads -->
+          <circle cx="180" cy="230" r="3.5" fill="#A9854B"/>
+          <circle cx="180" cy="230" r="1.5" fill="#F2EEE7"/>
+          <circle cx="220" cy="190" r="3.5" fill="#A9854B"/>
+          <circle cx="220" cy="190" r="1.5" fill="#F2EEE7"/>
+          <circle cx="120" cy="220" r="3" fill="#A9854B"/>
+          <circle cx="260" cy="140" r="3.5" fill="#A9854B"/>
+          <circle cx="260" cy="140" r="1.5" fill="#F2EEE7"/>
+          <circle cx="40" cy="200" r="3" fill="#A9854B"/>
+          <circle cx="170" cy="130" r="2.5" fill="#A9854B"/>
+        </svg>
+      </div>
+
+      <div class="hero-container">
+        <!-- 1. Exact Original SAIT Logo (Centered above SAIT) -->
+        <div class="hero-logo-wrap">
+          <img src="assets/images/sait-logo.png" alt="Students Association of Information Technology Logo" class="hero-logo-img">
+        </div>
+
+        <!-- 2. SAIT Wordmark (Exact luxury tracking) -->
+        <h1 class="hero-title-sait">S A I T</h1>
+
+        <!-- 3. Organization Name -->
+        <div class="hero-org-subtitle">
+          STUDENT ASSOCIATION OF<br class="sub-br">INFORMATION TECHNOLOGY
+        </div>
+
+        <!-- 4. Diamond Line Divider -->
+        <div class="hero-diamond-divider">
+          <span class="diamond-line"></span>
+          <span class="diamond-sym">◇</span>
+          <span class="diamond-line"></span>
+        </div>
+
+        <!-- 5. Hero Mission Tagline Sentence -->
+        <p class="hero-mission-sentence">
+          Empowering students, encouraging innovation,<br>
+          and building the future of technology together.
+        </p>
+
+        <!-- 6. [ EXPLORE SAIT → ] Button -->
+        <a href="#features" class="btn-hero-exact" id="heroExploreBtn">
+          <span>EXPLORE SAIT</span>
+          <span class="btn-arrow">→</span>
+        </a>
+
+        <!-- 7. Minimal Mouse Scroll Indicator with Chevron -->
+        <a href="#features" class="hero-scroll-indicator" aria-label="Scroll down to content">
+          <div class="scroll-mouse-pill">
+            <div class="scroll-mouse-dot"></div>
+          </div>
+          <div class="scroll-chevron">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="1 1 6 6 11 1"></polyline>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         INSTITUTIONAL ACCREDITATION & HERITAGE BAR
+         Details: Establishment 1995, NAAC A+, NBA Tier-1 Washington Accord, SOE CUSAT
+         ======================================================================= -->
+    <section class="accreditation-bar" id="accreditation-strip">
+      <div class="container-wide">
+        <div class="acc-bar-grid">
+          <div class="acc-item">
+            <div class="acc-metric">1995</div>
+            <div class="acc-meta">
+              <span class="acc-label">ESTABLISHED</span>
+              <span class="acc-sub">India’s 1st Undergraduate B.Tech in IT</span>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <div class="acc-metric">NAAC A+</div>
+            <div class="acc-meta">
+              <span class="acc-label">ACCREDITATION</span>
+              <span class="acc-sub">Highest Grade University Status</span>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <div class="acc-metric">TIER-1 NBA</div>
+            <div class="acc-meta">
+              <span class="acc-label">WASHINGTON ACCORD</span>
+              <span class="acc-sub">Global Engineering Mobility</span>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <div class="acc-metric">SOE CUSAT</div>
+            <div class="acc-meta">
+              <span class="acc-label">DIVISION OF IT</span>
+              <span class="acc-sub">Autonomous State University Campus</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         ABOUT SECTION — Editorial Narrative & 4 Horizontal Capabilities
+         ======================================================================= -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-header-editorial">
+          <span class="editorial-kicker">ABOUT SAIT</span>
+          <h2 class="about-headline">
+            Building a community of technology innovators.
+          </h2>
+          <p class="about-narrative">
+            Founded in 1995 under the School of Engineering, Cochin University of Science and Technology (CUSAT), the Division of Information Technology holds the distinct honor of being the very first department in India to offer Information Technology as an undergraduate B.Tech degree.
+          </p>
+          <p class="about-narrative">
+            Operating under CUSAT's autonomous university framework in Kochi, Kerala, SAIT acts as the intellectual bridge uniting student ambition, academic excellence, faculty mentorship, and international industry networks.
+          </p>
+        </div>
+
+        <!-- 4 Capabilities Horizontally with Thin Dividers & Simple Line Icons -->
+        <div class="capabilities-row">
+          <!-- 01 COLLABORATE -->
+          <div class="capability-item">
+            <div class="capability-num">01</div>
+            <div class="capability-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="capability-title">COLLABORATE</h3>
+            <p class="capability-desc">
+              Cross-disciplinary cohorts uniting student developers, researchers, and alumni mentors on production-grade systems.
+            </p>
+          </div>
+
+          <!-- 02 INNOVATE -->
+          <div class="capability-item">
+            <div class="capability-num">02</div>
+            <div class="capability-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="capability-title">INNOVATE</h3>
+            <p class="capability-desc">
+              Translating theoretical computer science into deployable software prototypes and IoT devices through CIITIC maker incubation.
+            </p>
+          </div>
+
+          <!-- 03 LEARN -->
+          <div class="capability-item">
+            <div class="capability-num">03</div>
+            <div class="capability-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3 class="capability-title">LEARN</h3>
+            <p class="capability-desc">
+              Mastering industry-aligned 2023 Scheme curriculum spanning Cloud Native, Generative AI toolchains, and Cyber Forensics.
+            </p>
+          </div>
+
+          <!-- 04 ACHIEVE -->
+          <div class="capability-item">
+            <div class="capability-num">04</div>
+            <div class="capability-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <h3 class="capability-title">ACHIEVE</h3>
+            <p class="capability-desc">
+              Tier-1 Washington Accord credentialing, 99%+ consistent campus placements, and global competition honors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         FEATURES SECTION — Large Horizontal Rows
+         01 TECHNOLOGY, 02 INNOVATION, 03 COMMUNITY, 04 LEADERSHIP
+         ======================================================================= -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">CORE FOUNDATIONS</span>
+          <h2 class="section-title">Institutional Pillars</h2>
+          <p class="section-subtitle">
+            Rather than generic modules, SAIT operates as an editorial ecosystem cultivating intellectual curiosity, deep technical specialization, and executive poise.
+          </p>
+        </div>
+
+        <div class="features-list">
+          <!-- 01 TECHNOLOGY -->
+          <div class="feature-row">
+            <div class="feature-number">01</div>
+            <div class="feature-heading">TECHNOLOGY</div>
+            <div class="feature-body">
+              Deep curriculum integration spanning cloud native microservices, distributed ledger protocols, ethical binary reverse engineering, and foundational generative AI models deployed on dedicated high-performance computing clusters.
+            </div>
+            <div class="feature-tag-col">ADVANCED PEDAGOGY</div>
+          </div>
+
+          <!-- 02 INNOVATION -->
+          <div class="feature-row">
+            <div class="feature-number">02</div>
+            <div class="feature-heading">INNOVATION</div>
+            <div class="feature-body">
+              Direct physical integration with CUSAT's Centre for Innovation, Technology Transfer and Industrial Collaboration (CIITIC). Students transform semester research prototypes into patented hardware and viable tech ventures.
+            </div>
+            <div class="feature-tag-col">MAKER LAB</div>
+          </div>
+
+          <!-- 03 COMMUNITY -->
+          <div class="feature-row">
+            <div class="feature-number">03</div>
+            <div class="feature-heading">COMMUNITY</div>
+            <div class="feature-body">
+              A self-sustaining guild of over 500 undergraduate technologists. Peer bootcamps, open-source cohorts, and hackathon teams collaborate across four continuous academic years, cultivating lifelong professional camaraderie.
+            </div>
+            <div class="feature-tag-col">PEER CULTURE</div>
+          </div>
+
+          <!-- 04 LEADERSHIP -->
+          <div class="feature-row">
+            <div class="feature-number">04</div>
+            <div class="feature-heading">LEADERSHIP</div>
+            <div class="feature-body">
+              An elected student governance model comprising Executive, Technical, Media, Events, Outreach, and Placement wings. Students take complete fiduciary ownership of major symposiums and international partnerships.
+            </div>
+            <div class="feature-tag-col">GOVERNANCE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         ACHIEVEMENTS & STATS SECTION
+         Large Numbers + Editorial Accolades Timeline
+         ======================================================================= -->
+    <section class="achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">EXCELLENCE & LEGACY</span>
+          <h2 class="section-title">Achievements & Milestones</h2>
+          <p class="section-subtitle">
+            A documented track record of national pioneering status, international accreditations, research fellowship awards, and competitive global championship finishes.
+          </p>
+        </div>
+
+        <!-- High-Impact Editorial Stats Strip -->
+        <div class="stats-editorial-strip">
+          <div class="stat-editorial-item">
+            <div class="stat-big-num" data-target="30" data-suffix="+">30+</div>
+            <div class="stat-editorial-label">YEARS OF HERITAGE</div>
+            <div class="stat-editorial-sub">First B.Tech IT program introduced in India (1995)</div>
+          </div>
+
+          <div class="stat-editorial-item">
+            <div class="stat-big-num" data-target="500" data-suffix="+">500+</div>
+            <div class="stat-editorial-label">STUDENT MEMBERS</div>
+            <div class="stat-editorial-sub">Active undergraduate engineers across four batches</div>
+          </div>
+
+          <div class="stat-editorial-item">
+            <div class="stat-big-num" data-target="99" data-suffix="%+">99%+</div>
+            <div class="stat-editorial-label">PLACEMENT RECORD</div>
+            <div class="stat-editorial-sub">Consistent elite career recruitment across global giants</div>
+          </div>
+
+          <div class="stat-editorial-item">
+            <div class="stat-big-num" data-target="10" data-suffix="+">10+</div>
+            <div class="stat-editorial-label">ANNUAL INITIATIVES</div>
+            <div class="stat-editorial-sub">Hackathons, research fellowships, and technical colloquiums</div>
+          </div>
+        </div>
+
+        <!-- Editorial Timeline / Accolades List -->
+        <div class="achievements-timeline" id="achievementsGrid">
+          <!-- Injected via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         EVENTS SECTION — Clean Editorial Schedule List
+         ======================================================================= -->
+    <section class="events-section" id="events">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">CALENDAR & SPRINT</span>
+          <h2 class="section-title">Events & Hackathons</h2>
+          <p class="section-subtitle">
+            Engage with our flagship rapid innovation sprints, international cybersecurity CTFs, and alumni technology masterclasses.
+          </p>
+        </div>
+
+        <!-- Flagship Hackathon Highlight Strip -->
+        <div class="flagship-highlight-strip">
+          <div>
+            <span class="badge badge-gold" style="margin-bottom: 0.6rem;">FLAGSHIP SPRINT 2025</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; font-weight: 500; color: var(--text-primary); line-height: 1.2;">
+              Smart Campus Innovation Hackathon
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--accent-gold); font-style: italic; margin-top: 0.25rem;">
+              In memory of Abhijit Menon (SOE '17 Batch) • 8-Hour Rapid Sprint
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); max-width: 540px; margin-top: 0.5rem;">
+              ₹12,000 Cash Pool (1st: ₹5,000 | 2nd: ₹4,000 | 3rd: ₹3,000). Teams of 2–4 with mandatory female member representation.
+            </p>
+          </div>
+
+          <div class="flagship-countdown-group">
+            <div class="countdown-unit-editorial">
+              <span class="unit-num" id="countDays">11</span>
+              <span class="unit-lbl">Days</span>
+            </div>
+            <span class="countdown-sep-editorial">:</span>
+            <div class="countdown-unit-editorial">
+              <span class="unit-num" id="countHours">14</span>
+              <span class="unit-lbl">Hours</span>
+            </div>
+            <span class="countdown-sep-editorial">:</span>
+            <div class="countdown-unit-editorial">
+              <span class="unit-num" id="countMinutes">32</span>
+              <span class="unit-lbl">Minutes</span>
+            </div>
+            <span class="countdown-sep-editorial">:</span>
+            <div class="countdown-unit-editorial">
+              <span class="unit-num" id="countSeconds">45</span>
+              <span class="unit-lbl">Seconds</span>
+            </div>
+          </div>
+
+          <div>
+            <button class="btn btn-editorial btn-lg" id="openRegisterModalBtn">
+              <span>REGISTER TEAM</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Clean Editorial Schedule List -->
+        <div class="events-schedule-list">
+          <!-- 01 Flagship -->
+          <div class="event-schedule-row">
+            <div class="event-index">01</div>
+            <div class="event-main-col">
+              <div class="event-name">SMART CAMPUS INNOVATION</div>
+              <div class="event-memorial">In memory of Abhijit Menon (SOE '17 Batch)</div>
+            </div>
+            <div class="event-theme">
+              8-Hour rapid prototyping sprint designing hardware & software solutions for campus telemetry, security, and learning.
+            </div>
+            <div class="event-date-col">
+              <span>23.03.2025</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+            <div class="event-action-col">
+              <span class="badge badge-gold">OPEN SPRINT</span>
+            </div>
+          </div>
+
+          <!-- 02 DevCon -->
+          <div class="event-schedule-row">
+            <div class="event-index">02</div>
+            <div class="event-main-col">
+              <div class="event-name">DEVCON CUSAT 2024</div>
+              <div class="event-memorial">Cloud Native & Distributed Systems</div>
+            </div>
+            <div class="event-theme">
+              Two-day deep dive into cloud-native microservices, Docker containerization, Kubernetes clusters, and production observability.
+            </div>
+            <div class="event-date-col">
+              <span>18.10.2024</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+            <div class="event-action-col">
+              <span class="badge badge-charcoal">CONCLUDED</span>
+            </div>
+          </div>
+
+          <!-- 03 PromptCraft -->
+          <div class="event-schedule-row">
+            <div class="event-index">03</div>
+            <div class="event-main-col">
+              <div class="event-name">PROMPTCRAFT: GENAI SUMMIT</div>
+              <div class="event-memorial">AI Research Colloquium</div>
+            </div>
+            <div class="event-theme">
+              Hands-on workshop focusing on Retrieval-Augmented Generation (RAG), autonomous multi-agent systems, and ethical AI deployment.
+            </div>
+            <div class="event-date-col">
+              <span>12.08.2024</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+            <div class="event-action-col">
+              <span class="badge badge-charcoal">CONCLUDED</span>
+            </div>
+          </div>
+
+          <!-- 04 CyberShield -->
+          <div class="event-schedule-row">
+            <div class="event-index">04</div>
+            <div class="event-main-col">
+              <div class="event-name">CYBERSHIELD CTF</div>
+              <div class="event-memorial">12-Hour Security Championship</div>
+            </div>
+            <div class="event-theme">
+              High-intensity capture-the-flag tournament covering cryptography, memory safety exploitation, and network vulnerability analysis.
+            </div>
+            <div class="event-date-col">
+              <span>04.03.2024</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+            <div class="event-action-col">
+              <span class="badge badge-charcoal">CONCLUDED</span>
+            </div>
+          </div>
+
+          <!-- 05 Open Source Velocity -->
+          <div class="event-schedule-row">
+            <div class="event-index">05</div>
+            <div class="event-main-col">
+              <div class="event-name">OPEN SOURCE VELOCITY</div>
+              <div class="event-memorial">Alumni Engineering Masterclass</div>
+            </div>
+            <div class="event-theme">
+              Distinguished alumni session on contributing to the Linux Kernel, CNCF repositories, and winning Google Summer of Code (GSoC).
+            </div>
+            <div class="event-date-col">
+              <span>22.01.2024</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+            <div class="event-action-col">
+              <span class="badge badge-charcoal">CONCLUDED</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 Problem Statements Explorer Header -->
+        <div style="margin-top: 5rem; padding-top: 3rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="editorial-kicker">HACKATHON CHALLENGES</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 500; color: var(--text-primary);">
+              10 Official Problem Statements
+            </h3>
+          </div>
+          <span class="badge badge-gold">CIITIC SPRINT DOMAINS</span>
+        </div>
+
+        <div class="capabilities-row" id="problemsContainer" style="margin-top: 2rem; border-top: none; padding-top: 0;">
+          <!-- Injected via flagshipModal.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         PEOPLE / COMMUNITY SECTION — With Profile Photo Support
+         Faculty & Mentors, Executive Core, Specialized Wings, Alumni
+         ======================================================================= -->
+    <section class="people-section" id="people">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">COMMUNITY & PEOPLE</span>
+          <h2 class="section-title">Association, Faculty & Wings</h2>
+          <p class="section-subtitle">
+            Meet the professors, student executive committee, specialized wings, and distinguished alumni driving engineering excellence.
+          </p>
+        </div>
+
+        <!-- Text-based Minimal Tabs -->
+        <div class="tabs-nav" role="tablist">
+          <button class="tab-btn team-tab-btn active" data-filter="all">All Profiles</button>
+          <button class="tab-btn team-tab-btn" data-filter="faculty">Faculty & Mentors</button>
+          <button class="tab-btn team-tab-btn" data-filter="core">Executive Core</button>
+          <button class="tab-btn team-tab-btn" data-filter="technical">Technical Wing</button>
+          <button class="tab-btn team-tab-btn" data-filter="media">Media & Arts</button>
+          <button class="tab-btn team-tab-btn" data-filter="events">Events & Sports</button>
+          <button class="tab-btn team-tab-btn" data-filter="outreach">Outreach & Alumni</button>
+          <button class="tab-btn team-tab-btn" data-filter="alumni">Distinguished Alumni</button>
+        </div>
+
+        <div class="people-roster-grid" id="teamGrid">
+          <!-- Injected via teamFilter.js with Profile Photos -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         STUDENT ACTIVITY LOGGER
+         ======================================================================= -->
+    <section class="logger-section" id="logger">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">STUDENT PORTAL</span>
+          <h2 class="section-title">Student Activity Logger</h2>
+          <p class="section-subtitle">
+            A transparent portal for CUSAT IT undergraduates to log verified co-curricular achievements, earn university credits, and review department rankings.
+          </p>
+        </div>
+
+        <div class="tabs-nav">
+          <button class="tab-btn logger-tab-btn active" data-target="loggerSubmitView">Submit Activity</button>
+          <button class="tab-btn logger-tab-btn" data-target="loggerFeedView">Verified Stream</button>
+          <button class="tab-btn logger-tab-btn" data-target="loggerLeaderboardView">Department Leaderboard</button>
+        </div>
+
+        <div class="logger-editorial-wrapper">
+          <!-- Panel 1: Submission Form -->
+          <div class="logger-view-panel active" id="loggerSubmitView">
+            <div class="submission-split">
+              <form id="activitySubmitForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="logStudentName">Student Full Name</label>
+                    <input type="text" class="form-control" id="logStudentName" placeholder="e.g. Advaith Pradesh" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="logStudentYear">Academic Year</label>
+                    <select class="form-control" id="logStudentYear">
+                      <option value="1st Year">1st Year (2024–28)</option>
+                      <option value="2nd Year">2nd Year (2023–27)</option>
+                      <option value="3rd Year" selected>3rd Year (2022–26)</option>
+                      <option value="4th Year">4th Year (2021–25)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="logEventName">Event / Activity Title</label>
+                  <input type="text" class="form-control" id="logEventName" placeholder="e.g. Smart Campus Innovation Hackathon" required>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="activityCategorySelect">Activity Classification</label>
+                    <select class="form-control" id="activityCategorySelect">
+                      <!-- Injected via activityLogger.js -->
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="logRole">Your Role / Finish</label>
+                    <input type="text" class="form-control" id="logRole" placeholder="e.g. First Place / Lead Author" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="logDate">Date of Completion</label>
+                    <input type="date" class="form-control" id="logDate">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="logProofUrl">Verification URL / Repository</label>
+                    <input type="url" class="form-control" id="logProofUrl" placeholder="https://github.com/... or Certificate Link">
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-editorial btn-lg" id="submitActivityBtn" style="width: 100%;">
+                  <span>SUBMIT ACTIVITY FOR FACULTY REVIEW</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </button>
+              </form>
+
+              <!-- Points Live Calculator Widget -->
+              <div class="point-calculator-box">
+                <span class="badge badge-gold">CREDIT CALCULATOR</span>
+                <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 1rem; text-transform: uppercase; letter-spacing: 0.1em;">
+                  Estimated Activity Credits:
+                </div>
+                <div class="calc-points-display" id="calculatedPointsDisplay">+50</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.5rem;">
+                  Points are computed based on CUSAT / KTU co-curricular regulations certified by SAIT faculty mentors.
+                </p>
+                <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.8;">
+                  <div>• Hackathon Win: <strong>50 pts</strong></div>
+                  <div>• IEEE / ACM Research Paper: <strong>60 pts</strong></div>
+                  <div>• Open-Source Kernel / CNCF PR: <strong>30 pts</strong></div>
+                  <div>• Technical Workshop Attendee: <strong>15 pts</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Verified Feed -->
+          <div class="logger-view-panel" id="loggerFeedView">
+            <div class="activity-feed-list" id="activityFeedList">
+              <!-- Injected via activityLogger.js -->
+            </div>
+          </div>
+
+          <!-- Panel 3: Leaderboard -->
+          <div class="logger-view-panel" id="loggerLeaderboardView">
+            <div class="leaderboard-list" id="leaderboardList">
+              <!-- Injected via activityLogger.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         NOTICES & CIRCULARS
+         ======================================================================= -->
+    <section class="notices-section" id="notices">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">CIRCULARS</span>
+          <h2 class="section-title">Notices & Announcements</h2>
+          <p class="section-subtitle">
+            Stay informed with authenticated departmental notices, hackathon schedules, semester deadlines, and research calls.
+          </p>
+        </div>
+
+        <div class="tabs-nav">
+          <button class="tab-btn notif-filter-btn active" data-filter="all">All Circulars</button>
+          <button class="tab-btn notif-filter-btn" data-filter="Events">Events</button>
+          <button class="tab-btn notif-filter-btn" data-filter="Opportunities">Opportunities</button>
+          <button class="tab-btn notif-filter-btn" data-filter="Deadlines">Deadlines</button>
+          <button class="tab-btn notif-filter-btn" data-filter="Academics">Academics</button>
+        </div>
+
+        <div class="notices-list" id="notificationsFeed">
+          <!-- Injected via notifications.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CONTACT & INQUIRY SECTION
+         ======================================================================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">COMMUNICATION</span>
+          <h2 class="section-title">Connect with SAIT CUSAT</h2>
+          <p class="section-subtitle">
+            Have questions regarding symposium participation, corporate recruitment partnerships, or research collaborations?
+          </p>
+        </div>
+
+        <div class="contact-split-grid">
+          <!-- Left: Information -->
+          <div class="contact-info-block">
+            <div class="contact-detail-row">
+              <span class="contact-detail-label">DEPARTMENT HEADQUARTERS</span>
+              <div class="contact-detail-val">Division of Information Technology</div>
+              <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                School of Engineering (SOE), CUSAT<br>
+                South Kalamassery, Kochi, Kerala 682022
+              </div>
+            </div>
+
+            <div class="contact-detail-row">
+              <span class="contact-detail-label">STUDENT COORDINATION</span>
+              <div class="contact-detail-val">Abhinav O & Trisha K.V.</div>
+              <div style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                Phone: +91 9400642585 / +91 9616437972
+              </div>
+            </div>
+
+            <div class="contact-detail-row">
+              <span class="contact-detail-label">ELECTRONIC DISPATCH</span>
+              <div class="contact-detail-val">
+                <a href="mailto:contact@sait.org" style="color: var(--accent-gold);">contact@sait.org</a>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">
+                Official correspondence verified by SAIT executive desk
+              </div>
+            </div>
+
+            <div class="contact-detail-row" style="border-bottom: none;">
+              <span class="contact-detail-label">CAMPUS TRANSIT & INCUBATION</span>
+              <div style="font-size: 0.9rem; color: var(--text-secondary);">
+                Located at CIITIC Hub, 1.2 km from Cochin University Metro Station, NH 544.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Transmit Message Form -->
+          <div style="background: var(--bg-surface); padding: 3rem; border: 1px solid var(--border-subtle);">
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Your Name</label>
+                <input type="text" class="form-control" id="contactName" placeholder="Full name" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address</label>
+                <input type="email" class="form-control" id="contactEmail" placeholder="name@domain.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactCategory">Inquiry Focus</label>
+                <select class="form-control" id="contactCategory">
+                  <option value="hackathon">Smart Campus Innovation Hackathon</option>
+                  <option value="sponsorship">Corporate Sponsorship & Recruitment</option>
+                  <option value="alumni">Alumni Mentorship & Masterclasses</option>
+                  <option value="general">General Student Association Query</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Message</label>
+                <textarea class="form-control" id="contactMessage" placeholder="How may SAIT assist you?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-editorial btn-lg" id="submitContactBtn" style="width: 100%;">
+                <span>TRANSMIT DISPATCH</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER — Minimal & Cohesive
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- SAIT Gold Emblem -->
+      <img src="assets/images/sait-logo.png" alt="SAIT Emblem" class="footer-logo">
+      
+      <!-- Association Name & University -->
+      <div class="footer-title">
+        Students Association of Information Technology
+      </div>
+      <div class="footer-sub">
+        DIVISION OF INFORMATION TECHNOLOGY • CUSAT
+      </div>
+
+      <!-- Clean Horizontal Navigation Links -->
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="#home" class="footer-link">HOME</a>
+        <a href="#features" class="footer-link">FEATURES</a>
+        <a href="#achievements" class="footer-link">ACHIEVEMENTS</a>
+        <a href="#events" class="footer-link">EVENTS</a>
+        <a href="#about" class="footer-link">ABOUT</a>
+        <a href="#people" class="footer-link">COMMUNITY</a>
+        <a href="#contact" class="footer-link">CONTACT</a>
+      </nav>
+
+      <!-- Minimal Social Links -->
+      <div class="footer-socials">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="SAIT LinkedIn">LINKEDIN</a>
+        <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="SAIT GitHub">GITHUB</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="SAIT Instagram">INSTAGRAM</a>
+        <a href="mailto:contact@sait.org" class="footer-social-link" aria-label="SAIT Email">EMAIL</a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-copyright">
+        © 2026 SAIT (Student Association of Information Technology). All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS & DIALOGS
+       ========================================================================= -->
+
+  <!-- Hackathon Registration Modal -->
+  <div class="modal-overlay" id="hackathonModal" role="dialog" aria-modal="true" aria-labelledby="hackModalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="badge badge-gold" style="margin-bottom: 6px;">CIITIC • MARCH 23, 2025</span>
+          <h3 class="modal-title" id="hackModalTitle">Smart Campus Innovation</h3>
+        </div>
+        <button class="modal-close" id="closeHackathonModal" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="hackathonRegisterForm">
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+            Register your team for the 8-hour sprint. Team size: 2 to 4 members. Note that <strong>at least one female undergraduate member</strong> is mandatory per registered team.
+          </p>
+          <div class="form-group">
+            <label class="form-label" for="regTeamName">Team Name</label>
+            <input type="text" class="form-control" id="regTeamName" placeholder="e.g. ByteCraft Pioneers" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="regLeadName">Team Leader Name</label>
+              <input type="text" class="form-control" id="regLeadName" placeholder="Full name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="regEmail">Leader Email (CUSAT / Personal)</label>
+              <input type="email" class="form-control" id="regEmail" placeholder="name@domain.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regProblemStatement">Target Problem Statement (Optional)</label>
+            <select class="form-control" id="regProblemStatement">
+              <option value="Problem #01: Smart Learning & Digital Classrooms">Problem #01: Smart Learning & Digital Classrooms</option>
+              <option value="Problem #02: Student Engagement & Well-being">Problem #02: Student Engagement & Well-being</option>
+              <option value="Problem #03: Campus Security & Safety">Problem #03: Campus Security & Safety</option>
+              <option value="Problem #04: Smart Transportation & Parking">Problem #04: Smart Transportation & Parking</option>
+              <option value="Problem #05: Green Campus & Sustainability">Problem #05: Green Campus & Sustainability</option>
+              <option value="Problem #06: Energy Conservation & Management">Problem #06: Energy Conservation & Management</option>
+              <option value="Problem #07: Internships & Placements">Problem #07: Internships & Placements</option>
+              <option value="Problem #08: Student Admission Streamlining">Problem #08: Student Admission Streamlining</option>
+              <option value="Problem #09: Event Management Systems">Problem #09: Event Management Systems</option>
+              <option value="Problem #10: Data-Driven Decision-Making">Problem #10: Data-Driven Decision-Making</option>
+            </select>
+          </div>
+          <div class="form-group" style="background: var(--bg-primary); padding: 1rem; border: 1px solid var(--border-medium); border-radius: var(--radius-xs);">
+            <label style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem; cursor: pointer; color: var(--text-primary);">
+              <input type="checkbox" id="regFemaleCheck" required style="width: 16px; height: 16px;">
+              <span>I confirm our team includes at least one female undergraduate member (Mandatory Diversity Rule).</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-editorial btn-lg" style="width: 100%; margin-top: 1rem;">
+            <span>CONFIRM TEAM & GENERATE VIRTUAL PASS</span>
+          </button>
+        </form>
+
+        <div id="ticketPreviewArea" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Announcement Detail Modal -->
+  <div class="modal-overlay" id="announcementModal" role="dialog" aria-modal="true" aria-labelledby="announcementModalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <div id="announcementModalMeta"></div>
+          <h3 class="modal-title" id="announcementModalTitle">Notice</h3>
+        </div>
+        <button class="modal-close" id="closeAnnouncementModal" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body" id="announcementModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Stack Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Application Entry Point -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

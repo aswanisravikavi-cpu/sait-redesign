@@ -1,0 +1,154 @@
+/* ==========================================================================
+   SAIT CUSAT Design System — Exact Editorial Tech Direction
+   Warm Ivory / Champagne Base with Deep Navy Blue & Muted Champagne Gold
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     LIGHT THEME (Default): Rich Warm Ivory / Champagne Cream & Deep Navy Blue
+     ------------------------------------------------------------------------ */
+  --bg-primary: #FAF5EC;        /* Rich warm ivory base */
+  --bg-secondary: #F3ECE0;      /* Soft champagne surface */
+  --bg-tertiary: #EDE4D4;       /* Subtle warm nude */
+  --bg-surface: #FAF7F2;        /* Pristine ivory surface */
+  --bg-surface-elevated: #FFFFFF;
+  --bg-card: rgba(250, 247, 242, 0.95);
+  --bg-card-hover: #FFFFFF;
+  --bg-glass: rgba(250, 245, 236, 0.92);
+  --bg-glass-heavy: rgba(250, 245, 236, 0.98);
+  --bg-input: #FFFFFF;
+
+  /* Typography Colors - Deep Navy Blue (Never pure black) */
+  --text-primary: #0D1526;      /* Deep editorial navy */
+  --text-secondary: #30425D;    /* Muted navy slate */
+  --text-muted: #667895;        /* Subtle slate */
+  --text-inverse: #FAF5EC;      /* Warm ivory on dark buttons */
+
+  /* Muted Champagne Gold Accents */
+  --accent-gold: #B8934A;       /* Antique champagne gold */
+  --accent-gold-hover: #9C7A36; /* Deeper antique gold */
+  --accent-gold-light: #D4AF37; /* Warm illuminated gold */
+  --accent-gold-tint: rgba(184, 147, 74, 0.08);
+  --accent-gold-subtle: rgba(184, 147, 74, 0.12);
+  --accent-gold-glow: rgba(184, 147, 74, 0.22);
+
+  /* Primary Brand Mapping */
+  --primary: #B8934A;
+  --primary-hover: #9C7A36;
+  --primary-light: #0D1526;
+  --primary-glow: rgba(184, 147, 74, 0.18);
+  --primary-gradient: linear-gradient(135deg, #B8934A 0%, #D4AF37 100%);
+  --primary-gradient-subtle: rgba(184, 147, 74, 0.05);
+
+  /* Secondary Editorial Colors */
+  --navy-dark: #0D1526;         /* Hero CTA & Navy accents */
+  --navy-hover: #070B14;
+  --cyan: #365365;
+  --purple: #564761;
+  --emerald: #355A46;
+  --amber: #B8934A;
+  --rose: #824747;
+
+  /* Delicate Hairlines & Editorial Dividers */
+  --border-subtle: rgba(13, 21, 38, 0.08);
+  --border-medium: rgba(13, 21, 38, 0.13);
+  --border-gold: rgba(184, 147, 74, 0.32);
+  --border-gold-strong: #B8934A;
+  --border-focus: #B8934A;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Garamond, 'Playfair Display', Georgia, serif;
+  --font-display: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3.5rem;
+  --spacing-3xl: 5rem;
+  --spacing-4xl: 7.5rem;
+
+  /* Minimal Border Radii */
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-pill: 9999px;
+
+  /* Subtle Editorial Shadows */
+  --shadow-sm: 0 1px 3px rgba(13, 21, 38, 0.03);
+  --shadow-md: 0 4px 16px rgba(13, 21, 38, 0.05);
+  --shadow-lg: 0 12px 36px rgba(13, 21, 38, 0.07);
+  --shadow-glow-gold: 0 0 25px rgba(184, 147, 74, 0.20);
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Containers */
+  --container-max: 1200px;
+  --container-wide: 1360px;
+  --container-narrow: 880px;
+  --header-height: 84px;
+
+  /* Logo champagne gold tone */
+  --logo-filter: brightness(0) saturate(100%) invert(55%) sepia(35%) saturate(700%) hue-rotate(6deg) brightness(92%) contrast(88%);
+}
+
+/* --------------------------------------------------------------------------
+   DARK THEME: Deep Navy Blue Base & Warm Ivory / Champagne Gold
+   -------------------------------------------------------------------------- */
+[data-theme="dark"],
+[data-theme="noir"] {
+  --bg-primary: #090D16;        /* Deep navy blue background */
+  --bg-secondary: #0E1422;      /* Layered dark navy */
+  --bg-tertiary: #141C30;       /* Elevated dark navy */
+  --bg-surface: #101726;        /* Crisp dark surface */
+  --bg-surface-elevated: #162033;
+  --bg-card: rgba(16, 23, 38, 0.88);
+  --bg-card-hover: #162033;
+  --bg-glass: rgba(9, 13, 22, 0.90);
+  --bg-glass-heavy: rgba(9, 13, 22, 0.98);
+  --bg-input: #101726;
+
+  /* Typography Colors - Warm Ivory & Champagne */
+  --text-primary: #FAF5EC;      /* Warm ivory */
+  --text-secondary: #CBD5E1;    /* Soft silver-slate */
+  --text-muted: #8494AB;        /* Subtle slate */
+  --text-inverse: #090D16;      /* Deep navy for light badges */
+
+  /* Muted Champagne Gold (Brightened slightly for dark contrast) */
+  --accent-gold: #D4AF37;       /* Warm champagne gold */
+  --accent-gold-hover: #E2C05E;
+  --accent-gold-light: #F0D9AC;
+  --accent-gold-tint: rgba(212, 175, 55, 0.12);
+  --accent-gold-subtle: rgba(212, 175, 55, 0.14);
+  --accent-gold-glow: rgba(212, 175, 55, 0.28);
+
+  --primary: #D4AF37;
+  --primary-hover: #E2C05E;
+  --primary-light: #FAF5EC;
+  --primary-glow: rgba(212, 175, 55, 0.25);
+  --primary-gradient: linear-gradient(135deg, #D4AF37 0%, #E8CD9B 100%);
+
+  /* Navy button in dark mode has a distinct accent */
+  --navy-dark: #141C30;
+  --navy-hover: #1E2942;
+
+  /* Dark mode hairlines */
+  --border-subtle: rgba(250, 245, 236, 0.08);
+  --border-medium: rgba(250, 245, 236, 0.14);
+  --border-gold: rgba(212, 175, 55, 0.36);
+  --border-gold-strong: #D4AF37;
+  --border-focus: #D4AF37;
+
+  /* Dark mode logo filter */
+  --logo-filter: brightness(0) saturate(100%) invert(72%) sepia(35%) saturate(600%) hue-rotate(6deg) brightness(98%) contrast(90%);
+}

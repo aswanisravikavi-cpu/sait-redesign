@@ -1,0 +1,391 @@
+/* ==========================================================================
+   SAIT CUSAT — UI Components (Editorial Technology Theme)
+   Minimal, Architectural, Hairline Dividers, Champagne Gold Accents
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Buttons — Editorial & Minimal
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  user-select: none;
+  text-decoration: none;
+  position: relative;
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.btn svg {
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* Primary Editorial Button (Champagne Gold Border & Accent) */
+.btn-primary,
+.btn-editorial {
+  border-color: var(--accent-gold);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+.btn-primary:hover,
+.btn-editorial:hover {
+  background-color: var(--accent-gold);
+  color: #FFFFFF;
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 14px rgba(167, 131, 75, 0.2);
+}
+
+/* Secondary Editorial Button (Charcoal Minimal) */
+.btn-secondary {
+  border-color: var(--border-medium);
+  background-color: transparent;
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-primary);
+  background-color: rgba(23, 27, 34, 0.04);
+}
+
+/* Dark Accent Button */
+.btn-dark {
+  background-color: var(--text-primary);
+  color: var(--bg-surface);
+  border-color: var(--text-primary);
+}
+
+.btn-dark:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  border-color: var(--accent-gold);
+}
+
+/* HighlightButton: Muted Navy Blue Hover & Click Glow */
+.btn-highlight,
+.highlight-button {
+  --btn-highlight-color: rgba(59, 130, 246, 0.35);
+  --btn-border-color: rgba(59, 130, 246, 0.5);
+  position: relative;
+  overflow: hidden;
+  border-color: var(--border-medium);
+  transition: all var(--transition-base);
+}
+
+.btn-highlight:hover,
+.highlight-button:hover {
+  border-color: var(--btn-border-color);
+  box-shadow: 0 0 20px -2px var(--btn-highlight-color), 0 0 10px -1px var(--btn-border-color);
+  transform: translateY(-1px);
+}
+
+.btn-highlight:active,
+.highlight-button:active {
+  box-shadow: 0 0 28px 2px var(--btn-highlight-color);
+  transform: translateY(0);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+}
+
+.btn-lg {
+  padding: 1.05rem 2.4rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.18em;
+}
+
+/* Minimal Text Link with Arrow */
+.text-link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  transition: color var(--transition-fast);
+}
+
+.text-link-arrow:hover {
+  color: var(--accent-gold-hover);
+}
+
+.text-link-arrow svg {
+  transition: transform var(--transition-fast);
+}
+
+.text-link-arrow:hover svg {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   Minimal Badges & Eyebrow Tags
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.65rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text-secondary);
+}
+
+.badge-gold {
+  border-color: var(--border-gold);
+  color: var(--accent-gold);
+  background: var(--accent-gold-tint);
+}
+
+.badge-charcoal {
+  background: rgba(23, 27, 34, 0.05);
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Editorial Tabs (Text with Underline indicator, no pills)
+   -------------------------------------------------------------------------- */
+.tabs-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid var(--border-subtle);
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+.tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  padding: 0.75rem 0;
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.tab-btn.active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--accent-gold);
+}
+
+/* --------------------------------------------------------------------------
+   Form Elements — Crisp & Minimal
+   -------------------------------------------------------------------------- */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 1px var(--accent-gold);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Modal Dialogs — Architectural Ivory Card
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 27, 34, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.5rem;
+  position: relative;
+  transform: translateY(16px);
+  transition: transform var(--transition-smooth);
+}
+
+.modal-overlay.active .modal-card {
+  transform: translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.modal-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.modal-close {
+  background: none;
+  border: 1px solid var(--border-subtle);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modal-close:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Toasts
+   -------------------------------------------------------------------------- */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 3000;
+  pointer-events: none;
+}
+
+.toast {
+  background: var(--bg-surface);
+  border-left: 3px solid var(--accent-gold);
+  border-top: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 1rem 1.4rem;
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-md);
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 280px;
+  pointer-events: auto;
+  animation: toastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes toastSlideIn {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

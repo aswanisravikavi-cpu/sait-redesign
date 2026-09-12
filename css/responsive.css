@@ -1,0 +1,289 @@
+/* ==========================================================================
+   SAIT CUSAT — Responsive Media Queries
+   Tablets, Mobiles, and Ultrawide Displays
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablet Breakpoint (< 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  .nav-desktop-container {
+    display: none;
+  }
+
+  .hero-side-annotation {
+    display: none;
+  }
+
+  .capabilities-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+  }
+
+  .feature-row {
+    grid-template-columns: 80px 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0.5rem;
+  }
+
+  .feature-body {
+    grid-column: 2 / -1;
+  }
+
+  .feature-tag-col {
+    grid-column: 2 / -1;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+
+  .stats-editorial-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
+  }
+
+  .stat-editorial-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .people-roster-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+  }
+
+  .timeline-row {
+    grid-template-columns: 140px 1fr;
+    gap: 1.5rem;
+  }
+
+  .timeline-desc {
+    grid-column: 2 / -1;
+  }
+
+  .timeline-verified {
+    grid-column: 2 / -1;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+
+  .event-schedule-row {
+    grid-template-columns: 60px 1fr auto;
+    gap: 1.5rem;
+  }
+
+  .event-theme {
+    grid-column: 2 / -1;
+  }
+
+  .contact-split-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .hero-polyhedron-wrap {
+    opacity: 0.75;
+    bottom: -30px;
+    left: -30px;
+  }
+
+  .hero-circuits-wrap {
+    opacity: 0.75;
+    bottom: -15px;
+    right: -15px;
+  }
+
+  .acc-bar-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+
+  .acc-item:nth-child(2) {
+    border-right: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Landscape & Portrait (< 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .section {
+    padding: 5rem 0;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: 3rem;
+  }
+
+  .hero-title-sait {
+    font-size: clamp(3.2rem, 14vw, 5.2rem);
+    letter-spacing: 0.04em;
+    padding-left: 0.04em;
+    margin-bottom: 1rem;
+  }
+
+  .hero-org-subtitle {
+    letter-spacing: 0.16em;
+    font-size: clamp(0.74rem, 3.2vw, 0.84rem);
+    line-height: 1.45;
+    margin-bottom: 1rem;
+  }
+
+  .hero-accreditation-details {
+    gap: 0.25rem;
+    margin-bottom: 1.85rem;
+    padding: 0 0.5rem;
+  }
+
+  .acc-text-main {
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+  }
+
+  .acc-text-sub {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+  }
+
+  .acc-bar-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .acc-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 1.25rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .acc-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .btn-hero-exact {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .capabilities-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stats-editorial-strip {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stat-editorial-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 1.5rem;
+    padding-right: 0;
+  }
+
+  .stat-editorial-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .people-roster-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .timeline-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 2rem 0;
+  }
+
+  .timeline-year {
+    font-size: 1.6rem;
+  }
+
+  .event-schedule-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 0.5rem;
+  }
+
+  .event-index {
+    color: var(--accent-gold);
+  }
+
+  .event-name {
+    font-size: 1.5rem;
+  }
+
+  .event-action-col {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .flagship-highlight-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem;
+  }
+
+  .countdown-digits {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .notice-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile (< 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .container, .container-wide, .container-narrow {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .hero-logo-img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .hero-title-sait {
+    font-size: 3.2rem;
+    letter-spacing: 0.12em;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  .stat-big-num {
+    font-size: 2.8rem;
+  }
+
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .modal-card {
+    padding: 1.75rem 1.25rem;
+  }
+}

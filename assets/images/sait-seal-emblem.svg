@@ -1,0 +1,67 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="100%" height="100%">
+  <defs>
+    <!-- Top arc for circular text -->
+    <path id="textArcTop" d="M 46, 180 A 134, 134 0 1, 1 314, 180" fill="none" />
+    <!-- Bottom arc for circular text -->
+    <path id="textArcBottom" d="M 314, 180 A 134, 134 0 0, 1 46, 180" fill="none" />
+
+    <filter id="goldEmboss" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#846234" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <g id="sait-seal" filter="url(#goldEmboss)" fill="none" stroke="#9E7948">
+    <!-- Outer fine decorative boundary -->
+    <circle cx="180" cy="180" r="168" stroke-width="1.2" opacity="0.4" />
+    
+    <!-- Outer solid perimeter ring -->
+    <circle cx="180" cy="180" r="162" stroke-width="1.8" />
+
+    <!-- Inner boundary ring enclosing the text -->
+    <circle cx="180" cy="180" r="106" stroke-width="1.5" opacity="0.85" />
+    
+    <!-- Inner dotted accent ring -->
+    <circle cx="180" cy="180" r="100" stroke-width="1" stroke-dasharray="2.5 3.5" opacity="0.5" />
+
+    <!-- Circular Top Text -->
+    <text font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#9E7948" stroke="none" letter-spacing="3.6">
+      <textPath href="#textArcTop" startOffset="50%" text-anchor="middle">
+        STUDENTS ASSOCIATION OF INFORMATION TECHNOLOGY
+      </textPath>
+    </text>
+
+    <!-- Circular Bottom Text -->
+    <text font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#9E7948" stroke="none" letter-spacing="6">
+      <textPath href="#textArcBottom" startOffset="50%" text-anchor="middle">
+        • C U S A T •
+      </textPath>
+    </text>
+
+    <!-- Central SAIT Signature Circuit/Node Monogram 'S' -->
+    <g id="central-s-monogram" transform="translate(180, 180)">
+      <!-- S Body upper & lower continuous loops -->
+      <path d="M 18,-45 C 38,-45 48,-28 48,-14 C 48,6 26,16 0,16 C -26,16 -48,26 -48,46 C -48,62 -30,76 0,76 C 28,76 48,60 48,44" 
+            stroke="#9E7948" 
+            stroke-width="11" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" />
+
+      <!-- Upper complementary hook -->
+      <path d="M -18,-45 C -38,-45 -48,-28 -48,-14 C -48,-2 -32,10 -16,13" 
+            stroke="#9E7948" 
+            stroke-width="11" 
+            stroke-linecap="round" />
+
+      <!-- Center node accents inside loops -->
+      <circle cx="0" cy="-14" r="6" fill="#9E7948" stroke="none" />
+      <circle cx="0" cy="46" r="6" fill="#9E7948" stroke="none" />
+      
+      <!-- Terminal node accent dots -->
+      <circle cx="48" cy="-14" r="5" fill="#9E7948" stroke="none" />
+      <circle cx="-48" cy="46" r="5" fill="#9E7948" stroke="none" />
+      <circle cx="18" cy="-45" r="5.5" fill="#9E7948" stroke="none" />
+      <circle cx="-18" cy="-45" r="5.5" fill="#9E7948" stroke="none" />
+      <circle cx="48" cy="44" r="5.5" fill="#9E7948" stroke="none" />
+    </g>
+  </g>
+</svg>
